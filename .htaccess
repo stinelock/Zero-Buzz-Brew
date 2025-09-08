@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redirect om-os to omos.html
+RewriteRule ^om-os/?$ omos.html [L]
+
+# Redirect mere-end-promille to mereendpromille.html
+RewriteRule ^mere-end-promille/?$ mereendpromille.html [L]
+
+# Redirect vores-ol to Voresøl.html (handling special character)
+RewriteRule ^vores-ol/?$ Voresøl.html [L]

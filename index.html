@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zero Buzz Brew</title>
+    <link rel="stylesheet" href="/css/mainstyle.css" />
+    <link rel="icon" href="/img/ZBLogoSort.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/script/mainscript.js" defer></script>
+    <script src="/script/countdown.js" defer></script>
+    <script src="/script/loading.js" defer></script>
+  </head>
+  <body>
+    <header id="site-header">
+      <a class="logo" href="/">
+        <img
+          src="/img/MainLogoSort.png"
+          class="logo"
+          alt="Zero Buzz Brew Logo"
+        />
+      </a>
+      <nav class="submenu">
+        <ul>
+          <li><a href="/vores-ol.html">Vores Øl</a></li>
+          <li><a href="/mereendpromille.html">Mere end promille</a></li>
+          <li><a href="/omos.html">Om os</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- ========== Loading Screen ========== -->
+
+      <div id="loading-screen">
+        <img
+          src="/img/ZBLogoSort.png"
+          alt="ZeroBuzzBrew Logo"
+          id="loading-logo"
+        />
+        <div class="loading-bar-container">
+          <div id="loading-bar"></div>
+        </div>
+      </div>
+
+      <!-- ========== Video ========== -->
+
+      <div class="video-section">
+        <video muted autoplay loop id="header-video">
+          <source src="/video/ZBBVideo.mp4" type="video/mp4" />
+          Din browser understøtter ikke video.
+        </video>
+        <div class="scroll-arrow">&#x25BC;</div>
+      </div>
+
+      <!-- ========== Hero Section med 3 øl dåser ========== -->
+
+      <section class="product-teaser">
+        <div class="product-container">
+          <div class="cans">
+            <div class="cans">
+              <a href="Voresøl.html#oel-section">
+                <img
+                  class="can lightstream"
+                  src="/img/LightstreamPilsSkygge.png"
+                  alt="Lightstream Pils"
+                />
+              </a>
+
+              <a href="Voresøl.html#blanc-section">
+                <img
+                  class="can luftkastel"
+                  src="/img/LuftkastelBlancSkygge.png"
+                  alt="Luftkastel Blanc"
+                />
+              </a>
+              <a href="Voresøl.html#ipa-section">
+                <img
+                  class="can Sunset-IPA"
+                  src="/img/SunsetIPASkygge.png"
+                  alt="Sunset IPA"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="product-text">
+            <br />
+            <h2>Smage du elsker</h2>
+            <br />
+            <p>
+              Gå på opdagelse i vores forfriskende og smagfulde alkoholfrie øl
+            </p>
+            <br />
+            <a href="/vores-ol/" class="cta-btn">Find vores øl her!</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Mere end promille sektion ========== -->
+
+      <section class="mere-end-promille">
+        <div class="promillecontent">
+          <h2>Mere end Promille</h2>
+          <p>
+            For os handler øl ikke om alkohol, men om mennesker – og vi vil have
+            alle med!
+          </p>
+          <a href="/mere-end-promille/" class="cta-btn">Læs mere her!</a>
+        </div>
+      </section>
+
+      <!--CountDown-->
+      <section class="countdown-section">
+        <img src="img/SunsetIPAfog.png" alt="Sunset IPA" />
+        <div>
+          <h2>Sunset Haze IPA</h2>
+          <div id="countdown">
+            <h3>Kommer</h3>
+            <!--Nedtælling-->
+            <div class="countdown-row">
+              <!--Dage-->
+              <div class="countdown-unit">
+                <div class="countdown-tal" id="dage"></div>
+                <p>Dage</p>
+              </div>
+
+              <!--linje-->
+              <div class="vl"></div>
+
+              <!--Timer-->
+              <div class="countdown-unit">
+                <div class="countdown-tal" id="timer"></div>
+                <p>Timer</p>
+              </div>
+
+              <!--linje-->
+              <div class="vl"></div>
+
+              <!--Minutter-->
+              <div class="countdown-unit">
+                <div class="countdown-tal" id="minutter"></div>
+                <p>Minutter</p>
+              </div>
+
+              <!--linje-->
+              <div class="vl"></div>
+
+              <!--sekunder-->
+              <div class="countdown-unit">
+                <div class="countdown-tal" id="sekunder"></div>
+                <p>Sekunder</p>
+              </div>
+            </div>
+            <hr />
+            <h3>15. Maj 2025</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Om os sektion ========== -->
+
+      <section class="om-os">
+        <div class="om-oscontent">
+          <h2>Om os</h2>
+          <a href="/om-os/" class="cta-btn">Mød os her</a>
+        </div>
+      </section>
+
+      <!-- ========== Footer ========== -->
+
+      <div class="blå-boks">
+        <h1>Vi brygger til fællesskabet</h1>
+        <p>#NoBuzzNoPressure</p>
+      </div>
+    </main>
+    <footer>
+      <div class="hvid-boks">
+        <div id="footer-logo" class="footer-section">
+          <a href="index.html">
+            <img src="/img/MainLogoSort.png" alt="Logo" />
+          </a>
+        </div>
+        <div class="footer-section">
+          <h3>Vores øl</h3>
+          <p>
+            Lightstream Pils<br />
+            <br />
+            Luftkastel blanc<br />
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Kontakt</h3>
+          <p>
+            ZeroBB@gmail.com <br />
+            <br />
+            Poppeltoften 14, Hasselager<br />
+          </p>
+        </div>
+        <div class="footer-section">
+          <div class="ikoner">
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="/img/instagram.png" alt="Instagram" />
+            </a>
+            <br />
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="/img/facebook.png" alt="Facebook" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+.scroll-arrow3 {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #ffffff;
+  animation: arrowMove 1.5s infinite ease-in-out;
+}
+
+@keyframes arrowMove {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+/* ========== Main sektion ========== */
+
+.omos {
+  position: relative;
+  background: url(/img/omosZBB.png) no-repeat center center;
+  background-size: cover;
+  margin-top: 105px;
+  min-height: 700px;
+  display: flex;
+  align-items: flex-end; /* Positions content at the bottom */
+  padding: 80px 40px;
+}
+
+.omos .omoscontent {
+  max-width: 400px;
+  color: #fff;
+}
+
+.omos h2 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  font-family: Renogare;
+  color: #fff;
+}
+
+/* General text section styling */
+.text-section1 {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: left;
+  font-size: 2.2rem;
+  line-height: 1.6;
+  font-family: Libre Franklin;
+  color: #000;
+  margin-top: 105px;
+}
+
+.text-section1 h2 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  font-family: Renogare;
+  color: #000;
+}
+
+/* ========== Generel Image sektion styling ========== */
+
+.image-section1 {
+  position: relative;
+  background: url(/img/omOsOel.png) no-repeat center center;
+  background-size: cover;
+  margin-top: 105px;
+  min-height: 700px;
+  padding: 80px 40px;
+  justify-content: center;
+}
+
+.image-content1 {
+  margin: 60px auto;
+  padding: 120px;
+  text-align: left;
+  font-size: 2.2rem;
+  line-height: 1.6;
+  font-family: Libre Franklin;
+  color: #ffffff;
+  margin-top: 100px;
+}
+
+.image-section2 {
+  position: relative;
+  background: url(/img/bryghus.jpg) no-repeat center center;
+  background-size: cover;
+  margin-top: 105px;
+  min-height: 700px;
+  padding: 80px 40px;
+  justify-content: center;
+}
+
+.image-content2 {
+  margin: 60px auto;
+  padding: 20px;
+  text-align: left;
+  font-size: 2.2rem;
+  line-height: 1.6;
+  font-family: Libre Franklin;
+  color: #ffffff;
+  margin-top: 150px;
+}
+
+.image-section3 {
+  position: relative;
+  background: url(/img/cans.png) no-repeat center center;
+  background-size: cover;
+  margin-top: 105px;
+  min-height: 500px;
+  padding: 80px 40px;
+  justify-content: center;
+}

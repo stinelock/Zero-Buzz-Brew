@@ -1,0 +1,516 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Renogare";
+  src: url("/fonts/Renogare-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.2s ease;
+}
+
+/* Loading Logo Animation */
+#loading-logo {
+  height: 105px;
+  animation: scaleLogo 2s infinite ease-in-out;
+  margin-bottom: 20px;
+}
+
+/* Loading Bar Container */
+.loading-bar-container {
+  width: 200px;
+  height: 4px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2px;
+}
+
+/* Moving Bar */
+#loading-bar {
+  width: 50px;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  animation: movingBar 1.5s infinite linear;
+  border-radius: 2px;
+}
+
+@keyframes movingBar {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 150px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* Logo Scaling Animation */
+@keyframes scaleLogo {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+hr {
+  height: 0.2rem;
+  background-color: #000000;
+  color: #000000;
+  margin: 1rem;
+}
+
+/* logo af ZBB i øverste venstre hjørne + Header */
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+#site-header.scrolled {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Baggrund når der scrolles ned */
+  opacity: 100;
+}
+
+.submenu ul {
+  list-style: none;
+  display: flex;
+}
+
+.submenu ul li {
+  margin-left: 40px;
+}
+
+.submenu ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 22px;
+  font-family: Renogare;
+  position: relative;
+  transition: color 0.6s ease;
+}
+
+.submenu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.submenu ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.logo {
+  max-width: 105px;
+  max-height: 105px;
+  margin: 0;
+  display: block;
+  float: left;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== Video og Pil ========== */
+
+#header-video {
+  width: 100%;
+  height: 760px;
+  display: block;
+  margin-top: 105px;
+  object-fit: cover;
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #ffffff;
+  animation: arrowMove 1.5s infinite ease-in-out;
+}
+
+@keyframes arrowMove {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+/* ========== 3 Dåser øl sektion ========== */
+
+.product-teaser {
+  background-color: #f5e6cc;
+  padding: 120px 240px;
+}
+
+.product-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 600px;
+  justify-content: space-between;
+}
+
+.cans {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  flex: 0 0 auto;
+  margin-right: 40px;
+}
+
+.can {
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.can:hover {
+  transform: scale(1.05);
+}
+
+/* Lightstream Pils (front can, largest) */
+.lightstream {
+  width: 200px;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+
+/* Luftkastel Blanc (middle can) */
+.luftkastel {
+  width: 180px;
+  left: 120px;
+  top: 20px;
+  z-index: 2;
+}
+
+/* Peach Haze IPA (back can, smallest) */
+.Sunset-IPA {
+  width: 200px;
+  left: 240px;
+  top: 50px;
+  z-index: 1;
+}
+
+.product-text {
+  text-align: left;
+}
+
+.product-text h2 {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+  font-family: Renogare;
+}
+
+.product-text p {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  max-width: 400px;
+  font-family: Libre Franklin;
+}
+
+/* ========== Main CTA knap style ========== */
+
+.cta-btn {
+  display: inline-block;
+  background-color: #e97458;
+  color: #ffffff;
+  padding: 25px 40px;
+  font-family: Libre Franklin;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #c46953;
+}
+
+/* ========== Promille sektion ========== */
+
+.mere-end-promille {
+  position: relative;
+  background: url(/img/people.jpeg) no-repeat center center;
+  background-size: cover;
+  min-height: 700px;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+.mere-end-promille .promille-content {
+  max-width: 400px;
+  color: #fff;
+}
+
+.mere-end-promille h2 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  font-family: Renogare;
+  color: #fff;
+}
+
+.mere-end-promille p {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-family: Libre Franklin;
+  color: #fff;
+}
+
+.mere-end-promille .cta-btn {
+  display: inline-block;
+  background-color: #e97458;
+  color: #fff;
+  padding: 25px 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: Libre Franklin;
+  transition: background-color 0.3s ease;
+}
+
+.mere-end-promille .cta-btn:hover {
+  background-color: #c46953;
+}
+
+/*--------------------------------------------Countdown------------------------------------------*/
+.countdown-section {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  background-color: #ffdee1;
+  text-align: center;
+  padding: 6rem 3rem;
+}
+
+.countdown-section h2 {
+  font-size: 3.5vw;
+  font-weight: 500;
+  padding: 0;
+  font-family: Renogare;
+}
+
+.countdown-section h3 {
+  font-size: 2.5vw;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.countdown-section img {
+  max-width: 40%;
+  height: auto;
+  object-fit: scale-down;
+}
+
+.countdown-right {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  width: 50%;
+}
+
+#countdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 30px;
+  width: 100%;
+  height: auto;
+  font-family: Libre Franklin;
+}
+
+.countdown-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 1rem 2rem;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 100px;
+}
+
+.tal {
+  font-size: 3.5vw;
+  font-weight: 700;
+}
+
+.vl {
+  border-left: 4px solid black;
+  height: 100px;
+}
+
+/* ========== Om os sektion ========== */
+
+.om-os {
+  position: relative;
+  background: url(/img/omosZBB.png) no-repeat center center;
+  background-size: cover;
+  min-height: 700px;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+.om-os .om-oscontent {
+  max-width: 400px;
+  color: #fff;
+}
+
+.om-os h2 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  font-family: Renogare;
+  color: #fff;
+}
+
+.om-os .cta-btn {
+  display: inline-block;
+  background-color: #e97458;
+  color: #fff;
+  padding: 25px 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: Libre Franklin;
+  transition: background-color 0.3s ease;
+}
+
+.om-os .cta-btn:hover {
+  background-color: #c46953;
+}
+
+/* ========== Footer sektion ========== */
+
+.blå-boks {
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  font-family: Libre Franklin;
+  width: 100%;
+  background-color: #0d8381;
+  width: 100%;
+  padding: 45px;
+  color: #ffffff;
+}
+
+/* styling af footer */
+footer {
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  font-family: "albert-bold";
+  width: 100%;
+  padding: 4rem 1rem;
+}
+.hvid-boks {
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 20px;
+  font-family: "Inter_18pt-Light", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+h3 {
+  font-size: 1rem;
+  padding: 1rem 0 0 1rem;
+  color: black;
+  font-family: Libre Franklin;
+}
+.footer-section h3 {
+  font-size: 1rem;
+  padding: 0;
+  font-family: Libre Franklin;
+}
+.ikoner img {
+  width: 2rem;
+  padding: 0, 7rem;
+  width: 50px;
+  height: auto;
+  display: flex;
+}
+.ikoner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-section img {
+  max-width: 150px;
+}
+.footer-section p {
+  font-size: 1rem;
+  color: black;
+  font-family: Libre Franklin;
+}
